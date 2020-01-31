@@ -15,7 +15,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  
+
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -23,26 +23,27 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  
+
   rules: {
-    'arrow-parens': ["error", "as-needed"],
+    'arrow-parens': ['error', 'as-needed'],
+    'import/extensions': 'off',
     'react/jsx-filename-extension': [
       'error',
       {
         extensions: ['.tsx'],
       },
     ],
-    
+
     'import/prefer-default-export': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-member-accessibility': 'off'
+    '@typescript-eslint/explicit-member-accessibility': 'off',
   },
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
-      typescript: {}
+      typescript: {},
     },
   },
 };
