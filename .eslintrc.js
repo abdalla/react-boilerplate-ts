@@ -4,6 +4,7 @@ module.exports = {
     es6: true,
     jest: true,
   },
+  plugins: ['react', 'import', 'jsx-a11y'],
   extends: [
     'react-app',
     'airbnb',
@@ -14,6 +15,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
+  
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -21,14 +23,16 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'import', 'jsx-a11y'],
+  
   rules: {
+    'arrow-parens': ["error", "as-needed"],
     'react/jsx-filename-extension': [
       'error',
       {
         extensions: ['.tsx'],
       },
     ],
+    
     'import/prefer-default-export': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off'
@@ -38,7 +42,7 @@ module.exports = {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
-      typescript: {},
+      typescript: {}
     },
   },
 };
