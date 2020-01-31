@@ -3,7 +3,7 @@ import HtmlWebPackPlugin from 'html-webpack-plugin';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: './src/index.html',
+  template: './public/index.html',
 });
 
 const config: webpack.Configuration = {
